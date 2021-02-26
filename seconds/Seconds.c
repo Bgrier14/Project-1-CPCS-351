@@ -102,3 +102,24 @@ module_exit( proc_exit );
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Seconds Module");
 MODULE_AUTHOR("SGG");
+
+// ------------------------------------------------------------------------------------
+//Seconds.c Output
+//-------------------------------------------------------------------------------------
+
+// make
+// make -C /lib/modules/4.4.0-87-generic/build M=/home/osc/final-src-osc10e/ch2 modules
+// make[1]: Entering directory '/usr/src/linux-headers-4.4.0-87-generic'
+//   CC [M]  /home/osc/final-src-osc10e/ch2/Seconds.o
+//   Building modules, stage 2.
+//   MODPOST 1 modules
+//   CC      /home/osc/final-src-osc10e/ch2/Seconds.mod.o
+//   LD [M]  /home/osc/final-src-osc10e/ch2/Seconds.ko
+// make[1]: Leaving directory '/usr/src/linux-headers-4.4.0-87-generic'
+// osc@ubuntu:~/final-src-osc10e/ch2$ sudo insmod Seconds.ko
+// osc@ubuntu:~/final-src-osc10e/ch2$ cat /proc/Seconds
+// Seconds: 11
+
+// ------------------------------------------------------------------------------------
+//End of Seconds.c Output
+//-------------------------------------------------------------------------------------
