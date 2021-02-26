@@ -92,3 +92,21 @@ module_exit( proc_exit );
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Jiffies Module");
 MODULE_AUTHOR("SGG");
+
+// ------------------------------------------------------------------------------------
+//Jiffies.c Output
+//-------------------------------------------------------------------------------------
+
+// osc@ubuntu:~/final-src-osc10e/ch2$ sudo insmod Jiffies.ko
+// osc@ubuntu:~/final-src-osc10e/ch2$ cat /proc/jiffies
+// Jiffies: 4295028205
+// osc@ubuntu:~/final-src-osc10e/ch2$ rmmod
+// rmmod: ERROR: missing module name.
+// osc@ubuntu:~/final-src-osc10e/ch2$ rmmod Jiffies.ko
+// rmmod: ERROR: ../libkmod/libkmod-module.c:793 kmod_module_remove_module() could not remove 'Jiffies': Operation not permitted
+// rmmod: ERROR: could not remove module Jiffies.ko: Operation not permitted
+// osc@ubuntu:~/final-src-osc10e/ch2$ sudo rmmod Jiffies.ko
+
+// ------------------------------------------------------------------------------------
+//End of Jiffies.c Output
+//-------------------------------------------------------------------------------------
